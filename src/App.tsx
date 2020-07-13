@@ -1,5 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
+import { Tile } from './fixtures/tile';
+import MahjongTile from './components/MahjongTile/MahjongTile';
+import 'normalize.css';
 import './App.css';
 
 function App() {
@@ -19,6 +22,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <MahjongTile type={Tile.MAN_1} />
     </div>
   );
 }
