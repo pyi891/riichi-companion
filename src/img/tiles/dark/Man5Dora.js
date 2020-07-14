@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgMan5Dora(props) {
   return (
-    <svg width={300} height={400} {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 300 400" {...props}>
       <g transform="translate(0 -652.362)" fill="#d71e1e">
         <g fillRule="evenodd">
           <path d="M60.443 879.22c101.51 10.777 95.086-15.762 180.061-18.577 18.885-2.745 17.635-17.46-.449-16.017-90.368 2.244-58.78 34.94-177.693 16.092-28.997-5.176-24.264 14.568-1.92 18.502z" />

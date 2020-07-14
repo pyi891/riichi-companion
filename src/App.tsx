@@ -1,29 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
 import { Tile } from './fixtures/tile';
-import MahjongTile from './components/MahjongTile/MahjongTile';
 import 'normalize.css';
-import './App.css';
+import MahjongHand from './components/MahjongHand';
+import styled from 'styled-components/macro';
+
+const Main = styled.main`
+  height: 100vh;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <MahjongTile type={Tile.MAN_1} />
-    </div>
+    <>
+      <header>Riichi Companion App</header>
+      <Main>
+        <MahjongHand
+          tiles={[
+            Tile.MAN_1,
+            Tile.MAN_9,
+            Tile.PIN_1,
+            Tile.PIN_9,
+            Tile.SOU_1,
+            Tile.SOU_9,
+            Tile.TON,
+            Tile.NAN,
+            Tile.SHAA,
+            Tile.PEI,
+            Tile.CHUN,
+            Tile.HAKU,
+            Tile.HATSU,
+          ]}
+          wait={Tile.HATSU}
+        />
+      </Main>
+      <footer>
+        <p>By @pyi891</p>
+      </footer>
+    </>
   );
 }
 

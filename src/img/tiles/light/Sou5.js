@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgSou5(props) {
   return (
-    <svg width={300} height={400} {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 300 400" {...props}>
       <g transform="matrix(.95916 0 0 .95916 -93.208 -417.126)">
         <ellipse
           cx={135.055}

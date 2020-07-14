@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgSou1(props) {
   return (
-    <svg width={300} height={400} {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 300 400" {...props}>
       <g transform="matrix(.4669 0 0 .49874 -17.75 -28.276)">
         <use
           height="100%"

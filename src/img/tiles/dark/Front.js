@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgFront(props) {
   return (
-    <svg width={300} height={400} {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 300 400" {...props}>
       <defs>
         <mask maskUnits="userSpaceOnUse" id="Front_svg__a">
           <rect

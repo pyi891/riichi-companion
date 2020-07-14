@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgSou9(props) {
   return (
-    <svg width={300} height={400} {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 300 400" {...props}>
       <g transform="matrix(1.5015 0 0 1.14938 -450.654 -595.069)">
         <circle r={13.404} cy={540.31} cx={391.399} fill="#b93c3c" />
         <circle cx={408.704} cy={540.31} r={13.404} fill="#b93c3c" />

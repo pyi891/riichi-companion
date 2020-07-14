@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgMan9(props) {
   return (
-    <svg width={300} height={400} {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 300 400" {...props}>
       <g fillRule="evenodd">
         <g fill="#fff">
           <path d="M146.226 25.074c.545-9.272-36.812-17.958-33.245-4.27 17.95 62.019-5.543 79.388-66.767 100.841-4.171 1.146-5.269 9.32 1.846 7.116 64.537-20.004 103.842-24.603 98.166-103.687z" />

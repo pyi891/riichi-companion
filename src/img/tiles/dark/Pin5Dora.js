@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgPin5Dora(props) {
   return (
-    <svg width={300} height={400} {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 300 400" {...props}>
       <g transform="translate(0 -652.362)">
         <g transform="matrix(1.02274 0 0 1.02274 288.325 245.696)">
           <circle cx={-205.976} cy={485.489} r={59.759} fill="#d71e1e" />

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgPin6(props) {
   return (
-    <svg width={300} height={400} {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 300 400" {...props}>
       <g transform="translate(0 -662.74)">
         <circle r={61.118} cy={736.819} cx={100.455} />
         <circle cx={100.568} cy={988.504} r={61.118} />

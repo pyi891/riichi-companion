@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgSou8(props) {
   return (
-    <svg width={300} height={400} {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 300 400" {...props}>
       <g transform="translate(0 -652.362)">
         <ellipse
           ry={18.317}

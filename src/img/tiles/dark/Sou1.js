@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgSou1(props) {
   return (
-    <svg width={300} height={400} {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 300 400" {...props}>
       <g transform="matrix(.4669 0 0 .49874 -17.75 -28.276)">
         <path
           d="M99.223 628.416c-20.065 4.58-36.05 17.486-47.198 26.263 12.14-3.878 26.67-8.53 39.508-9.756 6.82-.173 6.597-.216 5.801 3.713l15.658-38.792c-3.42 3.582-8.362 16.104-13.769 18.572z"
