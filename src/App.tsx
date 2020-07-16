@@ -3,38 +3,52 @@ import { Tile } from './fixtures/tile';
 import 'normalize.css';
 import MahjongHand from './components/MahjongHand';
 import styled from 'styled-components/macro';
+import YakuEntry from './components/YakuEntry';
+import { Yaku, YAKU } from './fixtures/yaku';
 
 const Main = styled.main`
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+`;
+
+const Header = styled.header`
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    margin: 0;
+  }
+`;
+
+const Footer = styled.footer`
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+
+  p {
+    margin: 0;
+  }
 `;
 
 function App() {
   return (
     <>
-      <header>Riichi Companion App</header>
+      <Header>
+        <h1>Riichi Companion App</h1>
+      </Header>
       <Main>
-        <MahjongHand
-          tiles={[
-            Tile.MAN_1,
-            Tile.MAN_9,
-            Tile.PIN_1,
-            Tile.PIN_9,
-            Tile.SOU_1,
-            Tile.SOU_9,
-            Tile.TON,
-            Tile.NAN,
-            Tile.SHAA,
-            Tile.PEI,
-            Tile.CHUN,
-            Tile.HAKU,
-            Tile.HATSU,
-          ]}
-          wait={Tile.HATSU}
-        />
+        <div>
+          {Object.keys(Yaku).map((yaku) => (
+            <YakuEntry yakuKey={yaku} />
+          ))}
+        </div>
       </Main>
-      <footer>
+      <Footer>
         <p>By @pyi891</p>
-      </footer>
+      </Footer>
     </>
   );
 }

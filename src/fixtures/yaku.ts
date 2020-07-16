@@ -14,7 +14,7 @@ export enum YakuTag {
   EASY = 'easy',
 }
 
-enum Yaku {
+export enum Yaku {
   RIICHI,
   MENTSUMO,
   IPPATSU,
@@ -74,16 +74,17 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.RIICHI]: {
     url: 'http://arcturus.su/wiki/Riichi',
     englishName: 'Ready hand, riichi, reach',
-    japaneseName: '「立直」, 「リーチ」 - riichi',
+    japaneseName: '「立直」, 「リーチ」 (riichi)',
     tags: [YakuTag.CLOSED, YakuTag.EASY],
-    description: '',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis erat finibus, fermentum nunc eu, egestas est. Suspendisse ac lacus eget enim tincidunt varius at in neque. In pretium id elit feugiat posuere. In pharetra posuere lectus nec congue. Aliquam molestie urna sit amet diam mollis scelerisque. Nulla luctus, libero dignissim iaculis gravida, enim turpis mollis tortor, non suscipit metus risus sed sem. Aliquam at diam a sapien blandit finibus. Etiam vulputate ex vel risus commodo sollicitudin. Integer cursus molestie est a venenatis. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
     example: [],
     closedValue: 1,
   },
   [Yaku.MENTSUMO]: {
     url: 'http://arcturus.su/wiki/Menzenchin_tsumohou',
     englishName: 'Closed self draw',
-    japaneseName: '「門前清自摸和」, 「ツモ」 - menzenchin tsumohou, tsumo',
+    japaneseName: '「門前清自摸和」, 「ツモ」 (menzenchin tsumohou, tsumo)',
     tags: [YakuTag.CLOSED, YakuTag.LUCK],
     description: '',
     example: [],
@@ -117,7 +118,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.IPPATSU]: {
     url: 'http://arcturus.su/wiki/Ippatsu',
     englishName: 'One shot',
-    japaneseName: '「一発」 - ippatsu',
+    japaneseName: '「一発」 (ippatsu)',
     tags: [YakuTag.CLOSED, YakuTag.LUCK],
     description: '',
     example: [],
@@ -151,7 +152,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.PINFU]: {
     url: 'http://arcturus.su/wiki/Pinfu',
     englishName: 'All sequences',
-    japaneseName: '「平和」 - pinfu',
+    japaneseName: '「平和」 (pinfu)',
     tags: [YakuTag.CLOSED, YakuTag.SEQUENCE, YakuTag.EASY],
     description: '',
     example: [],
@@ -178,7 +179,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.IIPEIKOU]: {
     url: 'http://arcturus.su/wiki/Iipeikou',
     englishName: 'Identical sequences, pure double sequences',
-    japaneseName: '「一盃口」 - iipeikou',
+    japaneseName: '「一盃口」 (iipeikou)',
     tags: [YakuTag.CLOSED, YakuTag.SEQUENCE, YakuTag.EASY],
     description: '',
     example: [],
@@ -207,7 +208,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.HAITEI]: {
     url: 'http://arcturus.su/wiki/Haitei_raoyue_and_houtei_raoyui',
     englishName: 'Win by last draw',
-    japaneseName: '「海底撈月」 - haitei raoyue',
+    japaneseName: '「海底撈月」 (haitei raoyue)',
     tags: [YakuTag.LUCK],
     description: '',
     example: [],
@@ -241,7 +242,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.HOUTEI]: {
     url: 'http://arcturus.su/wiki/Haitei_raoyue_and_houtei_raoyui',
     englishName: 'Win by last discard',
-    japaneseName: '「河底撈魚」 - houtei raoyui',
+    japaneseName: '「河底撈魚」 (houtei raoyui)',
     tags: [YakuTag.LUCK],
     description: '',
     example: [],
@@ -273,7 +274,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.RINSHAN]: {
     url: 'http://arcturus.su/wiki/Rinshan_kaihou',
     englishName: 'Dead wall draw',
-    japaneseName: '「嶺上開花」 - rinshan kaihou',
+    japaneseName: '「嶺上開花」 (rinshan kaihou)',
     tags: [YakuTag.LUCK],
     description: '',
     example: [],
@@ -304,7 +305,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.CHANKAN]: {
     url: 'http://arcturus.su/wiki/Chankan',
     englishName: 'Robbing a kan',
-    japaneseName: '「搶槓」 - chankan',
+    japaneseName: '「搶槓」 (chankan)',
     tags: [YakuTag.LUCK],
     description: '',
     example: [],
@@ -334,7 +335,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.TANYAO]: {
     url: 'http://arcturus.su/wiki/Tanyao',
     englishName: 'All simples',
-    japaneseName: '「断么九」, 「断幺九」 - tanyao',
+    japaneseName: '「断么九」, 「断幺九」 (tanyao)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.EASY],
     description: '',
     example: [],
@@ -365,7 +366,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.YAKUHAI]: {
     url: 'http://arcturus.su/wiki/Yakuhai',
     englishName: 'Value tiles',
-    japaneseName: '「役牌」, 「飜牌」 - yakuhai, fanpai',
+    japaneseName: '「役牌」, 「飜牌」 (yakuhai, fanpai)',
     tags: [
       YakuTag.CLOSED,
       YakuTag.OPEN,
@@ -402,7 +403,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.DOUBLE_RIICHI]: {
     url: 'http://arcturus.su/wiki/Daburu_riichi',
     englishName: 'Double ready, double riichi',
-    japaneseName: '「ダブル立直」, 「ダブルリーチ」 - daburu riichi',
+    japaneseName: '「ダブル立直」, 「ダブルリーチ」 (daburu riichi)',
     tags: [YakuTag.CLOSED],
     description: '',
     example: [],
@@ -411,7 +412,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.CHANTA]: {
     url: 'http://arcturus.su/wiki/Chanta',
     englishName: 'Half outside, terminal or honor in each group',
-    japaneseName: '「混全帯么九」, 「全帯」 - honchantaiyaochuu, chanta',
+    japaneseName: '「混全帯么九」, 「全帯」 (honchantaiyaochuu, chanta)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.TERMINALS_AND_HONORS],
     description: '',
     example: [],
@@ -444,7 +445,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.SANSHOKU_DOUJUN]: {
     url: 'http://arcturus.su/wiki/Sanshoku_doujun',
     englishName: 'Three colored straight',
-    japaneseName: '「三色同順」 - sanshoku doujun, or just sanshoku',
+    japaneseName: '「三色同順」, 「三色」 (sanshoku doujun, sanshoku)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.SEQUENCE],
     description: '',
     example: [],
@@ -470,7 +471,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.ITTSU]: {
     url: 'http://arcturus.su/wiki/Ikkitsuukan',
     englishName: 'Full straight',
-    japaneseName: '「一気通貫」, 「一通」 - ikkitsuukan, ittsuu',
+    japaneseName: '「一気通貫」, 「一通」 (ikkitsuukan, ittsuu)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.SEQUENCE],
     description: '',
     example: [],
@@ -495,7 +496,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.TOITOI]: {
     url: 'http://arcturus.su/wiki/Toitoihou',
     englishName: 'All triplets',
-    japaneseName: '「対々和」, 「対々」 - toitoihou, toitoi',
+    japaneseName: '「対々和」, 「対々」 (toitoihou, toitoi)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.TRIPLET, YakuTag.EASY],
     description: '',
     example: [],
@@ -525,7 +526,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.SANANKOU]: {
     url: 'http://arcturus.su/wiki/Sanankou',
     englishName: 'Three concealed triplets',
-    japaneseName: '「三暗刻」 - sanankou',
+    japaneseName: '「三暗刻」 (sanankou)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.TRIPLET],
     description: '',
     example: [],
@@ -556,7 +557,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.SANSHOKU_DOUKOU]: {
     url: 'http://arcturus.su/wiki/Sanshoku_doukou',
     englishName: 'Three colored triplets',
-    japaneseName: '「三色同刻」 - sanshoku doukou',
+    japaneseName: '「三色同刻」 (sanshoku doukou)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.TRIPLET],
     description: '',
     example: [],
@@ -584,7 +585,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.SANKANTSU]: {
     url: 'http://arcturus.su/wiki/Sankantsu',
     englishName: 'Three kans',
-    japaneseName: '「三槓子」 - sankantsu',
+    japaneseName: '「三槓子」 (sankantsu)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.QUAD],
     description: '',
     example: [],
@@ -615,7 +616,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.CHIITOITSU]: {
     url: 'http://arcturus.su/wiki/Chiitoitsu',
     englishName: 'Seven pairs',
-    japaneseName: '「七対子」 - chiitoitsu',
+    japaneseName: '「七対子」 (chiitoitsu)',
     tags: [YakuTag.CLOSED, YakuTag.SPECIAL, YakuTag.EASY],
     description: '',
     example: [],
@@ -637,7 +638,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.HONROUTOU]: {
     url: 'http://arcturus.su/wiki/Honroutou',
     englishName: 'Terminals and honors',
-    japaneseName: '「混老頭」 - honroutou',
+    japaneseName: '「混老頭」 (honroutou)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.TERMINALS_AND_HONORS],
     description: '',
     example: [],
@@ -665,7 +666,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.SHOUSANGEN]: {
     url: 'http://arcturus.su/wiki/Shousangen',
     englishName: 'Small three dragons',
-    japaneseName: '「小三元」 - shousangen',
+    japaneseName: '「小三元」 (shousangen)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.TERMINALS_AND_HONORS],
     description: '',
     example: [],
@@ -694,7 +695,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.HONITSU]: {
     url: 'http://arcturus.su/wiki/Honiisou',
     englishName: 'Half flush',
-    japaneseName: '「混一色」, 「混一」 - honiisou, honitsu',
+    japaneseName: '「混一色」, 「混一」 (honiisou, honitsu)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.SUITS, YakuTag.EASY],
     description: '',
     example: [],
@@ -729,7 +730,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.JUNCHAN]: {
     url: 'http://arcturus.su/wiki/Junchantaiyaochuu',
     englishName: 'Full outside, terminal in each meld',
-    japaneseName: '「純全帯么九」, 「純全」 - junchantaiyaochuu, junchan',
+    japaneseName: '「純全帯么九」, 「純全」 (junchantaiyaochuu, junchan)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.TERMINALS_AND_HONORS],
     description: '',
     example: [],
@@ -760,7 +761,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.RYANPEIKOU]: {
     url: 'http://arcturus.su/wiki/Ryanpeikou',
     englishName: 'Twice pure double sequences',
-    japaneseName: '「二盃口」 - ryanpeikou',
+    japaneseName: '「二盃口」 (ryanpeikou)',
     tags: [YakuTag.CLOSED, YakuTag.SEQUENCE],
     description: '',
     example: [],
@@ -786,7 +787,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.CHINITSU]: {
     url: 'http://arcturus.su/wiki/Chiniisou',
     englishName: 'Full flush',
-    japaneseName: '「清一色」, 「清一」 - chinitsu',
+    japaneseName: '「清一色」, 「清一」 (chiniisou, chinitsu)',
     tags: [YakuTag.CLOSED, YakuTag.OPEN, YakuTag.SUITS],
     description: '',
     example: [],
@@ -817,7 +818,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.KAZOE]: {
     url: 'http://arcturus.su/wiki/Kazoe_yakuman',
     englishName: 'Counted yakuman',
-    japaneseName: '「数え役満」 - kazoe yakuman',
+    japaneseName: '「数え役満」 (kazoe yakuman)',
     tags: [YakuTag.YAKUMAN, YakuTag.CLOSED, YakuTag.OPEN],
     description: '',
     example: [],
@@ -826,7 +827,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.KOKUSHI]: {
     url: 'http://arcturus.su/wiki/Kokushi_musou',
     englishName: 'Thirteen orphans',
-    japaneseName: '「国士無双」 - kokushi musou',
+    japaneseName: '「国士無双」 (kokushi musou)',
     tags: [YakuTag.YAKUMAN, YakuTag.CLOSED, YakuTag.SPECIAL],
     description: '',
     example: [],
@@ -835,7 +836,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.SUUANKOU]: {
     url: 'http://arcturus.su/wiki/Suuankou',
     englishName: 'Four concealed triplets',
-    japaneseName: '「四暗刻」 - suuankou',
+    japaneseName: '「四暗刻」 (suuankou)',
     tags: [YakuTag.YAKUMAN, YakuTag.CLOSED, YakuTag.TRIPLET],
     description: '',
     example: [],
@@ -844,7 +845,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.DAISANGEN]: {
     url: '',
     englishName: 'Big three dragons',
-    japaneseName: '「大三元」 - daisangen',
+    japaneseName: '「大三元」 (daisangen)',
     tags: [
       YakuTag.YAKUMAN,
       YakuTag.CLOSED,
@@ -859,7 +860,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.SHOUSUUSHII]: {
     url: 'http://arcturus.su/wiki/Suushiihou',
     englishName: 'Little four winds',
-    japaneseName: '「小四喜」 - shousuushii',
+    japaneseName: '「小四喜」 (shousuushii)',
     tags: [
       YakuTag.YAKUMAN,
       YakuTag.CLOSED,
@@ -874,7 +875,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.DAISUUSHII]: {
     url: 'http://arcturus.su/wiki/Suushiihou',
     englishName: 'Big four winds',
-    japaneseName: '「大四喜」 - daisuushii',
+    japaneseName: '「大四喜」 (daisuushii)',
     tags: [
       YakuTag.YAKUMAN,
       YakuTag.CLOSED,
@@ -889,7 +890,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.TSUUIISOU]: {
     url: 'http://arcturus.su/wiki/Tsuuiisou',
     englishName: 'All honors',
-    japaneseName: '「字一色」 - tsuuiisou',
+    japaneseName: '「字一色」 (tsuuiisou)',
     tags: [
       YakuTag.YAKUMAN,
       YakuTag.CLOSED,
@@ -903,7 +904,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.CHINROUTOU]: {
     url: 'http://arcturus.su/wiki/Chinroutou',
     englishName: 'All terminals',
-    japaneseName: '「清老頭」 - chinroutou',
+    japaneseName: '「清老頭」 (chinroutou)',
     tags: [
       YakuTag.YAKUMAN,
       YakuTag.CLOSED,
@@ -917,7 +918,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.RYUUIISOU]: {
     url: 'http://arcturus.su/wiki/Ryuuiisou',
     englishName: 'All green',
-    japaneseName: '「緑一色」 - ryuuiisou',
+    japaneseName: '「緑一色」 (ryuuiisou)',
     tags: [YakuTag.YAKUMAN, YakuTag.CLOSED, YakuTag.OPEN, YakuTag.SUITS],
     description: '',
     example: [],
@@ -926,7 +927,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.CHUUREN_POUTOU]: {
     url: 'http://arcturus.su/wiki/Chuuren_poutou',
     englishName: 'Nine gates',
-    japaneseName: '「九連宝燈」 - chuuren poutou',
+    japaneseName: '「九連宝燈」 (chuuren poutou)',
     tags: [YakuTag.YAKUMAN, YakuTag.CLOSED, YakuTag.SUITS],
     description: '',
     example: [],
@@ -935,7 +936,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.SUUKANTSU]: {
     url: 'http://arcturus.su/wiki/Suukantsu',
     englishName: 'Four kans',
-    japaneseName: '「四槓子」 - Four kans',
+    japaneseName: '「四槓子」 (suukantsu)',
     tags: [YakuTag.YAKUMAN, YakuTag.CLOSED, YakuTag.OPEN, YakuTag.QUAD],
     description: '',
     example: [],
@@ -944,7 +945,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.TENHOU]: {
     url: 'http://arcturus.su/wiki/Tenhou_and_chiihou',
     englishName: 'Heavenly hand',
-    japaneseName: '「天和」 - tenhou',
+    japaneseName: '「天和」 (tenhou)',
     tags: [YakuTag.YAKUMAN, YakuTag.LUCK],
     description: '',
     example: [],
@@ -953,7 +954,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.CHIIHOU]: {
     url: 'http://arcturus.su/wiki/Tenhou_and_chiihou',
     englishName: 'Earthly hand',
-    japaneseName: '「地和」 - chiihou',
+    japaneseName: '「地和」 (chiihou)',
     tags: [YakuTag.YAKUMAN, YakuTag.LUCK],
     description: '',
     example: [],
@@ -962,7 +963,7 @@ export const YAKU: { [key in Yaku]: YakuData } = {
   [Yaku.NAGASHI_MANGAN]: {
     url: 'http://arcturus.su/wiki/Nagashi_mangan',
     englishName: 'Mangan at draw',
-    japaneseName: '「流し満貫」 - nagashi mangan',
+    japaneseName: '「流し満貫」 (nagashi mangan)',
     tags: [YakuTag.SPECIAL, YakuTag.LUCK],
     description: '',
     example: [],
