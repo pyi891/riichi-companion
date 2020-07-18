@@ -1,34 +1,33 @@
 import React, { Suspense } from 'react';
 import styled from 'styled-components/macro';
-import { Tile, TILE } from '../fixtures/tile';
+import { TILES } from '../fixtures/tile';
 
-type TileDivProps = {
-  isWait: boolean;
-};
-
-const TileDiv = styled.div<TileDivProps>`
+const TileDiv = styled.div`
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   border: 1px solid black;
   border-radius: 4px;
-  padding: 2px 0;
-  align-items: center;
-  background: ${(props) => (props.isWait ? 'blue' : 'white')};
+  padding: 4px;
+  max-height: 60px;
+  max-width: 48px;
 `;
 
 type Props = {
-  type: Tile;
+  tileCode: string;
   isWait?: boolean;
   theme?: 'light' | 'dark';
 };
 
-const MahjongTile = ({ type, isWait = false, theme = 'light' }: Props) => {
-  const { fileName } = TILE[type];
+const MahjongTile = ({ tileCode, theme = 'light' }: Props) => {
+  const { fileName } = TILES[tileCode];
   const Svg = React.lazy(() => import(`../img/tiles/${theme}/${fileName}`));
 
   return (
-    <TileDiv isWait={isWait}>
-      <Suspense fallback={'...'}>
-        <Svg height={34} width={29} />
+    <TileDiv>
+      <Suspense fallback={''}>
+        <Svg alt={tileCode} height="100%" width="100%" />
       </Suspense>
     </TileDiv>
   );

@@ -9,11 +9,16 @@ const YakuEntryDiv = styled.div`
   }
 `;
 
+const ALL_YAKU = Object.keys(YAKU);
+
 const FilterableYakuList = () => {
+  // TODO: add filters
+  const filteredYaku = ALL_YAKU;
+
   return (
     <div>
-      {Object.keys(YAKU).map((yaku) => (
-        <YakuEntryDiv>
+      {Object.keys(YAKU).map((yaku, index) => (
+        <YakuEntryDiv key={`${yaku}-${index}`}>
           <YakuEntry yaku={yaku} key={YAKU[yaku].simpleName} />
           <hr />
         </YakuEntryDiv>

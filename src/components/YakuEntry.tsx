@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import styled from 'styled-components/macro';
 import { YAKU } from '../fixtures/yaku';
+import MahjongHand from './MahjongHand';
 
 type Props = {
   yaku: string;
@@ -17,12 +18,11 @@ const YakuEntry = ({ yaku }: Props) => {
     englishName,
     japaneseName,
     tags,
-    description,
+    descriptionComponent,
     example,
     openValue,
     closedValue,
     specialValue,
-    // compatibility,
   } = YAKU[yaku];
 
   let value;
@@ -37,6 +37,10 @@ const YakuEntry = ({ yaku }: Props) => {
     value = `${specialValue}`;
   }
 
+  const Description = React.lazy(() =>
+    import(`./yaku-descriptions/${descriptionComponent}`)
+  );
+
   return (
     <div>
       <p>
@@ -46,11 +50,18 @@ const YakuEntry = ({ yaku }: Props) => {
           </A>
         </strong>
       </p>
-      <p>English name: {englishName}</p>
-      <p>Japanese name: {japaneseName}</p>
+      <p>English: {englishName}</p>
+      <p>Japanese: {japaneseName}</p>
       <p>Value: {value}</p>
-      <p>Tags: {tags.join(', ')}</p>
-      <p>Description: {description}</p>
+      <p>Tags: {[...tags].join(', ')}</p>
+      <Suspense fallback="...">
+        <Description />
+      </Suspense>
+      {example && (
+        <div>
+          <p>Example:</p> <MahjongHand tiles={example} />
+        </div>
+      )}
     </div>
   );
 };

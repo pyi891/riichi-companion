@@ -1,10 +1,6 @@
 import React from 'react';
-import { Tile } from './fixtures/tile';
 import 'normalize.css';
-import MahjongHand from './components/MahjongHand';
 import styled from 'styled-components/macro';
-import YakuEntry from './components/YakuEntry';
-import { YAKU } from './fixtures/yaku';
 import FilterableYakuList from './components/FilterableYakuList';
 
 const Main = styled.main`
