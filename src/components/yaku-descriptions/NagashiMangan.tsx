@@ -13,7 +13,7 @@ const NagashiMangan = () => (
         (wind and dragon) tiles.
       </li>
       <li>The player may not have called any tiles.</li>
-      <li>No tiles have been called from the player's discards</li>
+      <li>No tiles have been called from the player's discards.</li>
     </ul>
     <p>
       Players who have successfully met these conditions are awarded the amount

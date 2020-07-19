@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import styled from 'styled-components/macro';
 import { TILES } from '../fixtures/tile';
 
@@ -22,13 +22,15 @@ type Props = {
 
 const MahjongTile = ({ tileCode, theme = 'light' }: Props) => {
   const { fileName } = TILES[tileCode];
-  const Svg = React.lazy(() => import(`../img/tiles/${theme}/${fileName}`));
 
   return (
     <TileDiv>
-      <Suspense fallback={''}>
-        <Svg alt={tileCode} height="100%" width="100%" />
-      </Suspense>
+      <img
+        src={`${process.env.PUBLIC_URL}/tiles/${theme}/${fileName}.svg`}
+        alt={tileCode}
+        height="100%"
+        width="100%"
+      />
     </TileDiv>
   );
 };
