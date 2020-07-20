@@ -7,7 +7,7 @@ const TileDiv = styled.div`
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  border: 1px solid black;
+  border: 1px solid ${(props) => props.theme.foreground};
   border-radius: 4px;
   padding: 4px;
   max-height: 60px;

@@ -3,11 +3,15 @@ import styled from 'styled-components/macro';
 import YakuEntry from './YakuEntry';
 import { YAKU, Tag } from '../fixtures/yaku';
 
-const FilterDiv = styled.div`
+type FilterDivProps = {
+  isFilterCollapsed: boolean;
+};
+
+const FilterDiv = styled.div<FilterDivProps>`
   position: sticky;
-  border-bottom: 1px solid ${(props) => props.theme.highContrast};
+  border-bottom: 1px solid ${(props) => props.theme.lowContrast};
   width: 100%;
-  padding: 0 1em 1em;
+  padding: ${(props) => (props.isFilterCollapsed ? '0 1em' : '0 1em 1em')};
   top: 0;
   background: ${(props) => props.theme.background};
 `;
@@ -47,6 +51,19 @@ const TagButton = styled(Button)<TagButtonProps>`
     props.selected ? props.theme.background : props.theme.foreground};
 `;
 
+const CaretButton = styled.button`
+  width: 100%;
+  text-align: left;
+  font-size: 1em;
+  background: none;
+  border: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
 const YakuListDiv = styled.div`
   width: 100%;
 `;
@@ -55,10 +72,10 @@ const YakuEntryDiv = styled.div`
   &:last-child hr {
     display: none;
   }
-`;
 
-const Hr = styled.hr`
-  border-color: ${(props) => props.theme.highContrast};
+  &:not(:last-child) {
+    border-bottom: 1px solid ${(props) => props.theme.lowContrast};
+  }
 `;
 
 const ALL_YAKU_KEYS = Object.keys(YAKU);
@@ -74,6 +91,7 @@ const isSuperset = (set: Set<any>, subset: Set<any>) => {
 
 const FilterableYakuList = () => {
   const [selectedTags, setSelectedTags] = useState(new Set<Tag>());
+  const [isFilterCollapsed, setIsFilterCollapsed] = useState(false);
 
   const onTagClicked = (tag: Tag) => {
     const newSelectedTags = new Set<Tag>([...selectedTags]);
@@ -93,35 +111,44 @@ const FilterableYakuList = () => {
 
   return (
     <>
-      <FilterDiv>
+      <FilterDiv isFilterCollapsed={isFilterCollapsed}>
         <div>
-          <p>Filter by tag:</p>
-          <div>
-            {Object.values(Tag).map((tagValue, index) => {
-              return (
-                <TagButton
-                  key={`${tagValue}-${index}`}
-                  onClick={() => onTagClicked(tagValue)}
-                  selected={selectedTags.has(tagValue)}
-                >
-                  {tagValue}
-                </TagButton>
-              );
-            })}
-          </div>
-          <Button
-            backgroundType="outline"
-            onClick={() => setSelectedTags(new Set())}
-          >
-            Clear
-          </Button>
+          <p>
+            <CaretButton
+              onClick={() => setIsFilterCollapsed(!isFilterCollapsed)}
+            >
+              Filters {isFilterCollapsed ? '▸' : '▾'}
+            </CaretButton>
+          </p>
+          {!isFilterCollapsed && (
+            <>
+              <div>
+                {Object.values(Tag).map((tagValue, index) => {
+                  return (
+                    <TagButton
+                      key={`${tagValue}-${index}`}
+                      onClick={() => onTagClicked(tagValue)}
+                      selected={selectedTags.has(tagValue)}
+                    >
+                      {tagValue}
+                    </TagButton>
+                  );
+                })}
+              </div>
+              <Button
+                backgroundType="outline"
+                onClick={() => setSelectedTags(new Set())}
+              >
+                Clear
+              </Button>
+            </>
+          )}
         </div>
       </FilterDiv>
       <YakuListDiv>
         {filteredYakuKeys.map((yakuKey, index) => (
           <YakuEntryDiv key={`${yakuKey}-${index}`}>
             <YakuEntry yakuKey={yakuKey} key={`${index}-${yakuKey}`} />
-            <hr />
           </YakuEntryDiv>
         ))}
       </YakuListDiv>

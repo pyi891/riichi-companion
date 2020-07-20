@@ -1,7 +1,14 @@
 import React from 'react';
-import 'normalize.css';
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+  NavLink,
+} from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components/macro';
 import FilterableYakuList from './components/FilterableYakuList';
+import 'normalize.css';
 
 const Main = styled.main`
   display: flex;
@@ -13,26 +20,46 @@ const Main = styled.main`
 `;
 
 const Header = styled.header`
-  padding: 32px 0;
   display: flex;
   justify-content: center;
   background: ${(props) => props.theme.background};
+`;
 
-  h1 {
+const Nav = styled.nav`
+  background: ${(props) => props.theme.background};
+  border-bottom: 1px solid ${(props) => props.theme.lowContrast};
+  width: 100%;
+
+  ul {
+    padding: 0;
+    width: 100%;
     margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+`;
+
+const NavigationLink = styled(NavLink)`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  text-decoration: none;
+
+  &:not(:last-child) {
+    border-right: 1px solid ${(props) => props.theme.lowContrast};
+  }
+
+  &:visited {
+    color: ${(props) => props.theme.foreground};
   }
 `;
 
 const Footer = styled.footer`
-  padding: 32px 0;
+  padding: 1em 0;
   display: flex;
   justify-content: center;
-  border-top: 1px solid black;
-  background: ${(props) => props.theme.background};
-
-  p {
-    margin: 0;
-  }
 `;
 
 const lightTheme = {
@@ -43,22 +70,56 @@ const lightTheme = {
   highContrast: '#5C5C5C',
 };
 
-function App() {
+const activeNavStyle = {
+  backgroundColor: lightTheme.lowContrast,
+};
+
+const App = () => {
   const theme = lightTheme;
 
   return (
-    <ThemeProvider theme={theme}>
-      <Header>
-        <h1>Riichi</h1>
-      </Header>
-      <Main>
-        <FilterableYakuList />
-      </Main>
-      <Footer>
-        <p>By @pyi891</p>
-      </Footer>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <Header>
+          <Nav>
+            <ul>
+              <NavigationLink exact to="/basics" activeStyle={activeNavStyle}>
+                <li>Basics</li>
+              </NavigationLink>
+              <NavigationLink to="/yaku" activeStyle={activeNavStyle}>
+                <li>Yaku</li>
+              </NavigationLink>
+              <NavigationLink to="/scoring" activeStyle={activeNavStyle}>
+                <li>Scoring</li>
+              </NavigationLink>
+            </ul>
+          </Nav>
+        </Header>
+        <Main>
+          <Switch>
+            <Redirect exact from="/" to="/basics" />
+            <Route path="/basics">
+              <div>Basics</div>
+            </Route>
+            <Route path="/yaku">
+              <FilterableYakuList />
+            </Route>
+            <Route path="/scoring">
+              <div>Scoring</div>
+            </Route>
+          </Switch>
+        </Main>
+        <Footer>
+          <img
+            alt="Link to GitHub repository"
+            src={`${process.env.PUBLIC_URL}/github-light.png`}
+            height={32}
+            width={32}
+          />
+        </Footer>
+      </ThemeProvider>
+    </Router>
   );
-}
+};
 
 export default App;
