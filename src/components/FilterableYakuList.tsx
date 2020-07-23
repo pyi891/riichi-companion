@@ -58,6 +58,7 @@ const CaretButton = styled.button`
   background: none;
   border: 0;
   padding: 0;
+  margin: 1em 0;
 
   &:focus {
     outline: none;
@@ -113,13 +114,9 @@ const FilterableYakuList = () => {
     <>
       <FilterDiv isFilterCollapsed={isFilterCollapsed}>
         <div>
-          <p>
-            <CaretButton
-              onClick={() => setIsFilterCollapsed(!isFilterCollapsed)}
-            >
-              Filters {isFilterCollapsed ? '▸' : '▾'}
-            </CaretButton>
-          </p>
+          <CaretButton onClick={() => setIsFilterCollapsed(!isFilterCollapsed)}>
+            Filters {isFilterCollapsed ? '▸' : '▾'}
+          </CaretButton>
           {!isFilterCollapsed && (
             <>
               <div>

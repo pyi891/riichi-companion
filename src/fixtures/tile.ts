@@ -1,7 +1,5 @@
 type TileData = {
   fileName: string;
-  englishName?: string;
-  japaneseName?: string;
 };
 
 export const TILES: { [key: string]: TileData } = {
@@ -10,7 +8,7 @@ export const TILES: { [key: string]: TileData } = {
   m3: { fileName: 'Man3' },
   m4: { fileName: 'Man4' },
   m5: { fileName: 'Man5' },
-  m5r: { fileName: 'Man5Dora' },
+  m0: { fileName: 'Man5-Dora' },
   m6: { fileName: 'Man6' },
   m7: { fileName: 'Man7' },
   m8: { fileName: 'Man8' },
@@ -20,7 +18,7 @@ export const TILES: { [key: string]: TileData } = {
   p3: { fileName: 'Pin3' },
   p4: { fileName: 'Pin4' },
   p5: { fileName: 'Pin5' },
-  p5r: { fileName: 'Pin5Dora' },
+  p0: { fileName: 'Pin5-Dora' },
   p6: { fileName: 'Pin6' },
   p7: { fileName: 'Pin7' },
   p8: { fileName: 'Pin8' },
@@ -30,44 +28,16 @@ export const TILES: { [key: string]: TileData } = {
   s3: { fileName: 'Sou3' },
   s4: { fileName: 'Sou4' },
   s5: { fileName: 'Sou5' },
-  s5r: { fileName: 'Sou5Dora' },
+  s0: { fileName: 'Sou5-Dora' },
   s6: { fileName: 'Sou6' },
   s7: { fileName: 'Sou7' },
   s8: { fileName: 'Sou8' },
   s9: { fileName: 'Sou9' },
-  z1: {
-    fileName: 'Ton',
-    englishName: 'East wind',
-    japaneseName: '「東」 (ton)',
-  },
-  z2: {
-    fileName: 'Nan',
-    englishName: 'South wind',
-    japaneseName: '「南」 (nan)',
-  },
-  z3: {
-    fileName: 'Shaa',
-    englishName: 'West wind',
-    japaneseName: '「西」 (shaa)',
-  },
-  z4: {
-    fileName: 'Pei',
-    englishName: 'North wind',
-    japaneseName: '「北」 (pei)',
-  },
-  z5: {
-    fileName: 'Haku',
-    englishName: 'White dragon',
-    japaneseName: '「白」 (haku)',
-  },
-  z6: {
-    fileName: 'Hatsu',
-    englishName: 'Green dragon',
-    japaneseName: '「發」 (hatsu)',
-  },
-  z7: {
-    fileName: 'Chun',
-    englishName: 'Red dragon',
-    japaneseName: '「中」 (chun)',
-  },
+  z1: { fileName: 'Ton' },
+  z2: { fileName: 'Nan' },
+  z3: { fileName: 'Shaa' },
+  z4: { fileName: 'Pei' },
+  z5: { fileName: 'Haku' },
+  z6: { fileName: 'Hatsu' },
+  z7: { fileName: 'Chun' },
 };

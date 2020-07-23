@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import MahjongTile from './MahjongTile';
 
-const MANZU_REGEXP = /([1-9]*)m/;
-const PINZU_REGEXP = /([1-9]*)p/;
-const SOUZU_REGEXP = /([1-9]*)s/;
+const MANZU_REGEXP = /([0-9]*)m/;
+const PINZU_REGEXP = /([0-9]*)p/;
+const SOUZU_REGEXP = /([0-9]*)s/;
 const HONORS_REGEXP = /([1-7]*)z/;
 
 const RowDiv = styled.div`

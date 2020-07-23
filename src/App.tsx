@@ -9,13 +9,15 @@ import {
 import styled, { ThemeProvider } from 'styled-components/macro';
 import FilterableYakuList from './components/FilterableYakuList';
 import 'normalize.css';
+import Basics from './components/Basics';
+import Scoring from './components/Scoring';
 
 const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
-  padding: 0 16px;
+  padding: 0 1em;
   background: ${(props) => props.theme.background};
 `;
 
@@ -60,6 +62,7 @@ const Footer = styled.footer`
   padding: 1em 0;
   display: flex;
   justify-content: center;
+  border-top: 1px solid ${(props) => props.theme.lowContrast};
 `;
 
 const lightTheme = {
@@ -99,23 +102,25 @@ const App = () => {
           <Switch>
             <Redirect exact from="/" to="/basics" />
             <Route path="/basics">
-              <div>Basics</div>
+              <Basics />
             </Route>
             <Route path="/yaku">
               <FilterableYakuList />
             </Route>
             <Route path="/scoring">
-              <div>Scoring</div>
+              <Scoring />
             </Route>
           </Switch>
         </Main>
         <Footer>
-          <img
-            alt="Link to GitHub repository"
-            src={`${process.env.PUBLIC_URL}/github-light.png`}
-            height={32}
-            width={32}
-          />
+          <a href="https://github.com/pyi891/riichi-companion">
+            <img
+              alt="Link to GitHub repository"
+              src={`${process.env.PUBLIC_URL}/github-light.png`}
+              height={32}
+              width={32}
+            />
+          </a>
         </Footer>
       </ThemeProvider>
     </Router>
