@@ -41,7 +41,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   MENZEN_TSUMO: {
     url: 'http://arcturus.su/wiki/Menzenchin_tsumohou',
-    englishName: 'Closed self draw',
+    englishName: 'Closed self draw, fully concealed hand',
     japaneseName: '「門前清自摸和」, 「ツモ」 (menzenchin tsumohou, tsumo)',
     simpleName: 'menzen tsumo',
     tags: new Set([Tag.CLOSED, Tag.DRAW, Tag.EASY, Tag.COMMON]),
@@ -59,7 +59,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   PINFU: {
     url: 'http://arcturus.su/wiki/Pinfu',
-    englishName: 'All sequences',
+    englishName: 'All sequences, pinfu',
     japaneseName: '「平和」 (pinfu)',
     simpleName: 'pinfu',
     tags: new Set([Tag.CLOSED, Tag.SEQUENCE, Tag.COMMON]),
@@ -69,7 +69,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   IIPEIKOU: {
     url: 'http://arcturus.su/wiki/Iipeikou',
-    englishName: 'Identical sequences, pure double sequences',
+    englishName: 'Identical sequences, pure double sequence',
     japaneseName: '「一盃口」 (iipeikou)',
     simpleName: 'iipeikou',
     tags: new Set([Tag.CLOSED, Tag.SEQUENCE, Tag.COMMON]),
@@ -99,7 +99,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   RINSHAN: {
     url: 'http://arcturus.su/wiki/Rinshan_kaihou',
-    englishName: 'Dead wall draw',
+    englishName: 'Dead wall draw, after a kan',
     japaneseName: '「嶺上開花」 (rinshan kaihou)',
     simpleName: 'rinshan kaihou',
     tags: new Set([Tag.DRAW]),
@@ -137,7 +137,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   YAKUHAI: {
     url: 'http://arcturus.su/wiki/Yakuhai',
-    englishName: 'Value tiles',
+    englishName: 'Value honors, dragon/prevalent wind/seat wind',
     japaneseName: '「役牌」, 「飜牌」 (yakuhai, fanpai)',
     simpleName: 'yakuhai',
     tags: new Set([Tag.CLOSED, Tag.OPEN, Tag.HONORS, Tag.EASY, Tag.COMMON]),
@@ -157,7 +157,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   CHANTA: {
     url: 'http://arcturus.su/wiki/Chanta',
-    englishName: 'Half outside, terminal or honor in each group',
+    englishName: 'Half outside hand, terminal or honor in each group',
     japaneseName: '「混全帯么九」, 「全帯」 (honchantaiyaochuu, chanta)',
     simpleName: 'chanta',
     tags: new Set([
@@ -174,7 +174,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   SANSHOKU_DOUJUN: {
     url: 'http://arcturus.su/wiki/Sanshoku_doujun',
-    englishName: 'Three colored straight',
+    englishName: 'Three colored straight, mixed triple sequence',
     japaneseName: '「三色同順」, 「三色」 (sanshoku doujun, sanshoku)',
     simpleName: 'sanshoku doujun',
     tags: new Set([Tag.CLOSED, Tag.OPEN, Tag.SEQUENCE, Tag.COMMON]),
@@ -185,7 +185,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   ITTSUU: {
     url: 'http://arcturus.su/wiki/Ikkitsuukan',
-    englishName: 'Full straight',
+    englishName: 'Full straight, pure straight',
     japaneseName: '「一気通貫」, 「一通」 (ikkitsuukan, ittsuu)',
     simpleName: 'ittsuu',
     tags: new Set([Tag.CLOSED, Tag.OPEN, Tag.SEQUENCE, Tag.COMMON]),
@@ -218,7 +218,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   SANSHOKU_DOUKOU: {
     url: 'http://arcturus.su/wiki/Sanshoku_doukou',
-    englishName: 'Three colored triplets',
+    englishName: 'Three colored triplets, triple triplets',
     japaneseName: '「三色同刻」 (sanshoku doukou)',
     simpleName: 'sanshoku doukou',
     tags: new Set([Tag.CLOSED, Tag.OPEN, Tag.TRIPLET]),
@@ -229,7 +229,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   SANKANTSU: {
     url: 'http://arcturus.su/wiki/Sankantsu',
-    englishName: 'Three kans',
+    englishName: 'Three kans, three quads',
     japaneseName: '「三槓子」 (sankantsu)',
     simpleName: 'sankantsu',
     tags: new Set([Tag.CLOSED, Tag.OPEN, Tag.QUAD]),
@@ -250,7 +250,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   HONROUTOU: {
     url: 'http://arcturus.su/wiki/Honroutou',
-    englishName: 'Terminals and honors',
+    englishName: 'All terminals and honors',
     japaneseName: '「混老頭」 (honroutou)',
     simpleName: 'honroutou',
     tags: new Set([Tag.CLOSED, Tag.OPEN, Tag.TERMINALS, Tag.HONORS]),
@@ -261,7 +261,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   SHOUSANGEN: {
     url: 'http://arcturus.su/wiki/Shousangen',
-    englishName: 'Small three dragons',
+    englishName: 'Little three dragons',
     japaneseName: '「小三元」 (shousangen)',
     simpleName: 'shousangen',
     tags: new Set([Tag.CLOSED, Tag.OPEN, Tag.HONORS]),
@@ -283,7 +283,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   JUNCHAN: {
     url: 'http://arcturus.su/wiki/Junchantaiyaochuu',
-    englishName: 'Full outside, terminal in each meld',
+    englishName: 'Fully outside hand, terminal in each meld',
     japaneseName: '「純全帯么九」, 「純全」 (junchantaiyaochuu, junchan)',
     simpleName: 'junchan',
     tags: new Set([Tag.CLOSED, Tag.OPEN, Tag.TERMINALS]),
@@ -294,7 +294,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   RYANPEIKOU: {
     url: 'http://arcturus.su/wiki/Ryanpeikou',
-    englishName: 'Twice pure double sequences',
+    englishName: 'Twice pure double sequence',
     japaneseName: '「二盃口」 (ryanpeikou)',
     simpleName: 'ryanpeikou',
     tags: new Set([Tag.CLOSED, Tag.SEQUENCE]),
@@ -360,7 +360,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   SHOUSUUSHII: {
     url: 'http://arcturus.su/wiki/Suushiihou',
-    englishName: 'Little four winds',
+    englishName: 'Four little winds',
     japaneseName: '「小四喜」 (shousuushii)',
     simpleName: 'shousuushii',
     tags: new Set([Tag.YAKUMAN, Tag.CLOSED, Tag.OPEN, Tag.HONORS, Tag.TRIPLET]),
@@ -370,7 +370,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   DAISUUSHII: {
     url: 'http://arcturus.su/wiki/Suushiihou',
-    englishName: 'Big four winds',
+    englishName: 'Four big winds',
     japaneseName: '「大四喜」 (daisuushii)',
     simpleName: 'daisuushii',
     tags: new Set([Tag.YAKUMAN, Tag.CLOSED, Tag.OPEN, Tag.HONORS, Tag.TRIPLET]),
@@ -420,7 +420,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   SUUKANTSU: {
     url: 'http://arcturus.su/wiki/Suukantsu',
-    englishName: 'Four kans',
+    englishName: 'Four kans, four quads',
     japaneseName: '「四槓子」 (suukantsu)',
     simpleName: 'suukantsu',
     tags: new Set([Tag.YAKUMAN, Tag.CLOSED, Tag.OPEN, Tag.QUAD]),
@@ -430,7 +430,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   TENHOU: {
     url: 'http://arcturus.su/wiki/Tenhou_and_chiihou',
-    englishName: 'Heavenly hand',
+    englishName: 'Heavenly hand, blessing of heaven',
     japaneseName: '「天和」 (tenhou)',
     simpleName: 'tenhou',
     tags: new Set([Tag.YAKUMAN]),
@@ -439,7 +439,7 @@ export const YAKU: { [key: string]: YakuData } = {
   },
   CHIIHOU: {
     url: 'http://arcturus.su/wiki/Tenhou_and_chiihou',
-    englishName: 'Earthly hand',
+    englishName: 'Earthly hand, blessing of earth',
     japaneseName: '「地和」 (chiihou)',
     simpleName: 'chiihou',
     tags: new Set([Tag.YAKUMAN]),

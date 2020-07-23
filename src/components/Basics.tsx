@@ -53,10 +53,46 @@ const Basics = () => (
       <li>Tsumo - drawing your winning tile from the wall.</li>
       <li>
         Ron - claiming your winning tile from an opponent's discard. Cannot be
-        called if you are in furiten (see below).
+        called if you are in furiten (more on this later).
       </li>
     </ul>
+    <h4>
+      Why can't I win with a completed hand/why is Mahjong Soul telling me "No
+      Yaku"?
+    </h4>
+    <p>
+      <strong>
+        You must have at least one valid <Link to="/yaku">yaku</Link> to win a
+        hand.
+      </strong>{' '}
+      You can think of yaku as a condition you have to meet in order to score
+      and win. This is usually related to the structure of your hand, but can
+      also be tied to other situations, the two most notable being when you
+      self-draw your winning tile while your hand is closed (menzen tsumo) or
+      when claiming your winning tile after declaring riichi (see below).
+    </p>
+    <h4>Declaring riichi</h4>
+    <p>
+      Riichi may be declared when a player advances their hand to tenpai without
+      calling any tiles from other players. Riichi may apply to any closed hand
+      configuration that is in tenpai, making it by far the most commonly scored
+      yaku.
+    </p>
+    <p>
+      When declaring riichi, the player must place a 1000 point wager that they
+      will win the hand on the table. A player with less than 1000 points cannot
+      declare riichi. Once they have declared riichi, the player may not alter
+      their hand any further (i.e. call an opponent's tile or keep any drawn
+      tiles that do not complete their hand) and must either wait for their
+      winning tile to be discarded by another player (to win by ron) or draw it
+      themselves from the wall (to win by tsumo, which additionally scores
+      menzen tsumo due to the closed hand requirement of riichi).
+    </p>
     <h4>Why am I in furiten?</h4>
+    <p>
+      Furiten is a state in which you cannot declare ron to win off your
+      opponent's discard due to at least one of the following conditions:
+    </p>
     <ul>
       <li>
         One of your waits is in your discard pile or was called by an opponent.
@@ -73,6 +109,7 @@ const Basics = () => (
         discard (ron). You are in furiten for the rest of the hand.
       </li>
     </ul>
+    <p>Note that it is still possible to win by tsumo while in furiten.</p>
     <h3>Calls</h3>
     <p>
       Calling tiles will open your hand, with the exception of a closed kan.
@@ -127,17 +164,17 @@ const Basics = () => (
       that round.
     </p>
     <p>
-      Commonly (but not always, dependent on rule set), each number suit also
-      contains one red five, which are also counted as one dora each. They
+      When a player wins after calling riichi, they gain access to ura dora,
+      which are the tiles underneath the dora indicators on the dead wall. They
+      function as additional dora indicators for the winner and can potentially
+      add value to the hand.
+    </p>
+    <p>
+      Commonly (but not always, depending on the rule set), each number suit
+      also contains one red five, which are counted as one dora each. They
       otherwise function identically to any other five tile.
     </p>
     <MahjongHand tiles="0m0p0s" />
-    <p>
-      When a player wins after calling riichi, they gain access to the ura dora,
-      which are the tiles underneath the dora indicators on the dead wall. They
-      function as additional dora indicators for the winner and can potentially
-      add more value to the hand.
-    </p>
   </BasicsDiv>
 );
 export default Basics;
