@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/riichi-companion/static/css/main.3f960433.chunk.css",
+    "main.js": "/riichi-companion/static/js/main.bd83b0af.chunk.js",
+    "main.js.map": "/riichi-companion/static/js/main.bd83b0af.chunk.js.map",
+    "runtime-main.js": "/riichi-companion/static/js/runtime-main.85c8ad82.js",
+    "runtime-main.js.map": "/riichi-companion/static/js/runtime-main.85c8ad82.js.map",
+    "static/css/2.764ccc25.chunk.css": "/riichi-companion/static/css/2.764ccc25.chunk.css",
+    "static/js/2.82251502.chunk.js": "/riichi-companion/static/js/2.82251502.chunk.js",
+    "static/js/2.82251502.chunk.js.map": "/riichi-companion/static/js/2.82251502.chunk.js.map",
+    "index.html": "/riichi-companion/index.html",
+    "precache-manifest.8adbc95163dd9302f3237a74b1252e0c.js": "/riichi-companion/precache-manifest.8adbc95163dd9302f3237a74b1252e0c.js",
+    "service-worker.js": "/riichi-companion/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/riichi-companion/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.3f960433.chunk.css.map": "/riichi-companion/static/css/main.3f960433.chunk.css.map",
+    "static/js/2.82251502.chunk.js.LICENSE.txt": "/riichi-companion/static/js/2.82251502.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85c8ad82.js",
+    "static/css/2.764ccc25.chunk.css",
+    "static/js/2.82251502.chunk.js",
+    "static/css/main.3f960433.chunk.css",
+    "static/js/main.bd83b0af.chunk.js"
+  ]
+}
